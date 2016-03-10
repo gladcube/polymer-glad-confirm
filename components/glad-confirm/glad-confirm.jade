@@ -1,0 +1,11 @@
+link(rel="import" href="../../bower_components/polymer/polymer.html")
+link(rel="import" href="../../bower_components/paper-dialog/paper-dialog.html")
+link(rel="import" href="../../bower_components/paper-button/paper-button.html")
+
+dom-module#glad-confirm
+  template
+    paper-dialog#dialog(modal="[[modal]]" on-iron-overlay-closed="_end")
+      pre [[message]]
+      .buttons
+        paper-button(raised dialog-dismiss) Cancel
+        paper-button(raised dialog-confirm) OK
